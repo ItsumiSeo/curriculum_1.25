@@ -1,6 +1,7 @@
 package main;
 
 import java.util.Random;
+import java.util.Scanner;
 
 import process.process;
 
@@ -21,7 +22,6 @@ public class main {
 	public static void main(String[] args) {
 		// キャラクターのインスタンスを作成
 		process player = new process();
-		String name;
 		
 		int n = r.nextInt(MAX);
 		int n1 = r1.nextInt(MAX);
@@ -29,7 +29,12 @@ public class main {
 		int n3 = r3.nextInt(MAX);
 		int n4 = r4.nextInt(MAX);
 		
-		player.setName("名前");
+		//Scannerで初期化
+		Scanner scanner = new Scanner(System.in);
+		//文字列の入力の受け取り
+		String name = scanner.next();
+		
+		player.setName(name);
 		player.setHp(n);
 		player.setMp(n1);
 		player.setAttack(n2);
